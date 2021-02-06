@@ -1,0 +1,123 @@
+<body>
+    <h1> Acme: First, Second, Third</h1>
+    <div id="lists">
+        <div id = "first" class = "box">
+                <div id = "forward1" class = "button" > 
+                    >
+                </div>
+                <div class = "button non" > 
+                    <
+                </div>
+                FIRST
+                <button class = 'char'> Moe </button>
+                <button class = 'char'> Larry </button>
+                <button class = 'char'>Curly </button>
+        </div>
+        <div id = "second" class = "box">
+            <div class = "button"> 
+                >
+            </div>
+            <div class = "button"> 
+                <
+            </div>
+            SECOND
+        
+        </div>
+        <div id = "third" class = "box">
+         <div class = "button non"> 
+                >
+         </div>
+         <div class = "button"> 
+            <
+     </div>
+     THIRD
+   
+        </div>
+        
+    </div>
+    <script>
+ 
+
+function colorize(event){
+event.classList.toggle('purple')
+}
+
+button = document.querySelectorAll(".char")
+button.forEach(char=> { char.addEventListener('click',(event)=> { 
+    colorize(event.target)})})
+
+// arrow1 = document.querySelector("#forward1")
+// arrow1.addEventListener("click", (event)=> {
+// const selectedchars = [...document.getElementsByClassName("purple")]
+// console.log(selectedchars)
+// const newparent = document.getElementById("second")
+// selectedchars.forEach(char => {newparent.appendChild(char)}) })
+
+function arrowfunc(arrowdir,newhome){
+    arrow = document.querySelector(arrowdir)
+    return arrow.addEventListener("click", (event)=> {
+        const selectedchars = [...document.getElementsByClassName("purple")]
+        console.log(selectedchars)
+        const newparent = document.getElementById(newhome)
+        selectedchars.forEach(char => {newparent.appendChild(char)}) }) }
+
+
+arrowfunc("#forward1","second")
+arrowfunc("#backward2", "first")
+arrowfunc("#forward2", "third")
+arrowfunc("backward3", "second")
+
+
+    </script>
+<style>
+
+ h1 {
+     text-align: center;
+
+ }
+ #lists {
+     display:flex;
+     justify-content: space-around;
+     padding: 10px;
+     border-style: solid;
+     border-color:black;
+ }
+
+ .box {
+    border-style: solid;
+    border-color:black;
+    width: 200px;
+ }
+ .button {
+     background-color: crimson;
+     height: 70px;
+     margin:1px;
+     display: block;
+     text-align: center;
+
+ }
+
+.char {
+background-color: lightgray;
+height: 80px;
+width: 200px;
+padding:10px;
+margin:1px;
+}
+
+#lists{
+    text-align: center;
+
+}
+
+.non{
+    background-color: lightgray;
+}
+
+.purple {
+    background-color: purple;
+}
+
+</style>
+   
+</body>
