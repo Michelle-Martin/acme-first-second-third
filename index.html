@@ -46,27 +46,26 @@ button = document.querySelectorAll(".char")
 button.forEach(char=> { char.addEventListener('click',(event)=> { 
     colorize(event.target)})})
 
-// arrow1 = document.querySelector("#forward1")
-// arrow1.addEventListener("click", (event)=> {
-// const selectedchars = [...document.getElementsByClassName("purple")]
-// console.log(selectedchars)
-// const newparent = document.getElementById("second")
-// selectedchars.forEach(char => {newparent.appendChild(char)}) })
+arrow1 = document.querySelector("#forward1")
+arrow1.addEventListener("click", (event)=> {
+const selectedchars = [...document.getElementsByClassName("purple")]
+console.log(selectedchars)
+const newparent = document.getElementById("second")
+selectedchars.forEach(char => {newparent.appendChild(char)}) })
 
-function arrowfunc(arrowdir,newhome){
-    arrow = document.querySelector(arrowdir)
-    return arrow.addEventListener("click", (event)=> {
-        const selectedchars = [...document.getElementsByClassName("purple")]
-        console.log(selectedchars)
-        const newparent = document.getElementById(newhome)
-        selectedchars.forEach(char => {newparent.appendChild(char)}) }) }
+//Need to get the below func working
+// function arrowfunc(arrowdir,newhome){
+//     arrow = document.querySelector(arrowdir)
+//     return arrow.addEventListener("click", (event)=> {
+//         const selectedchars = [...document.getElementsByClassName("purple")]
+//         console.log(selectedchars)
+//         const newparent = document.getElementById(newhome)
+//         selectedchars.forEach(char => {newparent.appendChild(char)}) }) }
 
-
-arrowfunc("#forward1","second")
-arrowfunc("#backward2", "first")
-arrowfunc("#forward2", "third")
-arrowfunc("backward3", "second")
-
+// arrowfunc("#forward1","second")
+// arrowfunc("#backward2", "first")
+// arrowfunc("#forward2", "third")
+// arrowfunc("backward3", "second")
 
     </script>
 <style>
